@@ -12,5 +12,5 @@ db.sync()
 
 
 server.listen(3333, () => {
-   console.log("Servidor rodando http://localhost:3333/api");
+   console.log("Servidor rodando");
 })
