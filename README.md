@@ -12,45 +12,47 @@ Buscar todos os usuarios GET: `http://localhost:3333/api/users`
 
 ```json
 {
-    "message": "Usuarios buscados com sucesso",
-    "status": "S",
-    "users": [
-        {
-            "id": 1,
-            "nome": "johnny",
-            "email": "meuemail@gmail.com",
-            "senha": "$2b$10$5hKD5APlay0my1Dc1wIG3OKoaBGmggpJb0pWq6K.zWBtnqEOkRhx2",
-            "nivel": "ADMIN"
-        }
-    ]
+  "message": "Usuarios buscados com sucesso",
+  "status": "S",
+  "users": [
+    {
+      "id": 1,
+      "nome": "johnny",
+      "email": "meuemail@gmail.com",
+      "senha": "$2b$10$5hKD5APlay0my1Dc1wIG3OKoaBGmggpJb0pWq6K.zWBtnqEOkRhx2",
+      "nivel": "ADMIN"
+    }
+  ]
 }
 ```
----
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-
 
 ---
+
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br>
+
+---
+
 Buscar um usuario GET: `http://localhost:3333/api/users/1`
 
 Resposta caso encontrar o usuario:
 
 ```json
 {
-    "message": "Usuario encontrado com sucesso",
-    "status": "S",
-    "user": {
-        "id": 1,
-        "nome": "johnny",
-        "email": "jbseubert@gmail.com",
-        "senha": "$2b$10$5hKD5APlay0my1Dc1wIG3OKoaBGmggpJb0pWq6K.zWBtnqEOkRhx2",
-        "nivel": "ADMIN"
-    }
+  "message": "Usuario encontrado com sucesso",
+  "status": "S",
+  "user": {
+    "id": 1,
+    "nome": "johnny",
+    "email": "jbseubert@gmail.com",
+    "senha": "$2b$10$5hKD5APlay0my1Dc1wIG3OKoaBGmggpJb0pWq6K.zWBtnqEOkRhx2",
+    "nivel": "ADMIN"
+  }
 }
 ```
 
@@ -62,20 +64,23 @@ Resposta se não encontrar nenhum usuário:
     "status": "N"
 }
 ```
----
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-
 
 ---
+
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br>
+
+---
+
 Criar um usuario POST: `http://localhost:3333/api/users`
 
 `Modelo dedados a ser enviado`
+
 ```json
 {
   "nome": "",
@@ -109,20 +114,22 @@ Se algum campo do json ficar vazio irá retornar:
     "status": "N"
 }
 ```
----
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-<br> 
-
 
 ---
+
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br>
+
+---
+
 Atualizar um usuario PUT: `http://localhost:3333/api/users/ID`
 
-Modelo de dados para atualizar um usuário  `ID VEM NA URL`
+Modelo de dados para atualizar um usuário `ID VEM NA URL`
 
 ```json
 {
@@ -139,15 +146,15 @@ Modelo de dados para atualizar um usuário  `ID VEM NA URL`
 
 ```json
 {
-    "message": "Usuário atualizado com sucesso",
-    "status": "S",
-    "usuarioAtualizado": {
-        "id": 2,
-        "nome": "Johnny",
-        "email": "jbseubert@gmail.com",
-        "senha": "Temporario12344",
-        "nivel": "NORMAL"
-    }
+  "message": "Usuário atualizado com sucesso",
+  "status": "S",
+  "usuarioAtualizado": {
+    "id": 2,
+    "nome": "Johnny",
+    "email": "jbseubert@gmail.com",
+    "senha": "Temporario12344",
+    "nivel": "NORMAL"
+  }
 }
 ```
 
@@ -155,18 +162,20 @@ Modelo de dados para atualizar um usuário  `ID VEM NA URL`
 
 ```json
 {
-    "message": "Favor preencher todos os campos para poder atualizar um usuário",
-    "status": "N"
+  "message": "Favor preencher todos os campos para poder atualizar um usuário",
+  "status": "N"
 }
 ```
+
 ---
+
 <br> 
 <br> 
 <br> 
 <br> 
 <br> 
 <br> 
-<br> 
+<br>
 
 ---
 
@@ -176,22 +185,20 @@ Se o usuario existir ou não existir irá retornar:
 
 ```json
 {
-    "message": "Usuario excluido com sucesso",
-    "status": "S"
+  "message": "Usuario excluido com sucesso",
+  "status": "S"
 }
 ```
 
-
-
-
 ---
+
 <br> 
 <br> 
 <br> 
 <br> 
 <br> 
 <br> 
-<br> 
+<br>
 
 ---
 
@@ -208,21 +215,22 @@ GET: `http://localhost:3333/api/verificarLogin`
 
 ### Tipos de Resposta
 
-
 `sucesso`
+
 ```json
 {
-    "message": "Usuário autenticado com sucesso!",
-    "status": "S",
-    "username": "johnny"
+  "message": "Usuário autenticado com sucesso!",
+  "status": "S",
+  "username": "johnny"
 }
 ```
 
 `falha`
+
 ```json
 {
-    "message": "Username / senha inválidos",
-    "status": "N"
+  "message": "Username / senha inválidos",
+  "status": "N"
 }
 ```
 
