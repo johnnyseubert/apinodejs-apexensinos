@@ -1,7 +1,11 @@
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('banco', 'user', 'password', {
-   dialect: 'sqlite',
-   host: './src/database/db.sqlite'
-})
-
+const sequelize = new Sequelize('postgres://user:password@host:port/database', {
+   dialectOptions: {
+      ssl: {
+         require: true,
+         rejectUnauthorized: false
+      }
+   }
+}
+);
 module.exports = sequelize;
